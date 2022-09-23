@@ -16,14 +16,19 @@ and call its methods.
 Thanks to the `NEAR CLI` deploying a contract is as simple as:
 
 1. Compiling the contract to wasm (done automatically through `yarn build` in our templates).
-2. Deploy it into the desired account using the [NEAR CLI](../4.tools/cli.md):
+2. Deploy it into the desired account using the [NEAR CLI](../4.tools/cli.md#near-deploy):
 
 ```bash
 # Login to NEAR
 near login
 
-# Deploy wasm to the <accountId> account
+# Deploy wasm to the <accountId> account (with no state initialization)
 near deploy <accountId> <route_to_wasm>
+
+# Deploy wasm to the <accountId> account (with state initialization)
+near deploy <accountId> <route_to_wasm> \
+  --initFunction <function_name> \
+  --initArgs <json_arguments>
 ```
 
 :::tip
