@@ -29,7 +29,7 @@ near deploy <accountId> <route_to_wasm>
 # OR
 
 # 2. Deploy wasm to the <accountId> account (with state initialization)
-# Cannot be re-used once the contract already a state
+# Cannot be re-used once the contract already has a state
 near deploy <accountId> <route_to_wasm> \
   --initFunction <function_name> \
   --initArgs <json_arguments>
