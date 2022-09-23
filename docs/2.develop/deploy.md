@@ -22,10 +22,12 @@ Thanks to the `NEAR CLI` deploying a contract is as simple as:
 # Login to NEAR
 near login
 
-# Deploy wasm to the <accountId> account (with no state initialization)
+# 1. Deploy wasm to the <accountId> account (with no state initialization)
 near deploy <accountId> <route_to_wasm>
 
-# Deploy wasm to the <accountId> account (with state initialization)
+# OR
+
+# 2. Deploy wasm to the <accountId> account (with state initialization)
 near deploy <accountId> <route_to_wasm> \
   --initFunction <function_name> \
   --initArgs <json_arguments>
